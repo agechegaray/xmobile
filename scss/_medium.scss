@@ -1,0 +1,34 @@
+/* NAVIGATION STUFF GOES HERE  */
+#primaryNav button {
+    display: none;
+}
+
+header {
+    grid-template-columns: 50px auto auto;
+}
+
+#primaryNav ul, #primaryNav ul.open {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: $primaryColor;
+    li a {
+        padding: .4rem 1rem;
+        color: white;
+    }
+    li.active a {
+        border-bottom: 2px solid #fff;
+    }
+    li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+// Create the For Loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%;
+    .medium-#{$i} {flex-basis: $w;}
+}
